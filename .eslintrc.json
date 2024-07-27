@@ -1,0 +1,67 @@
+{
+    "env": {
+        "node": true,
+        "browser": true,
+        "es6": true,
+        "jest": true
+    },
+    "parser": "@typescript-eslint/parser",
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "airbnb",
+		"plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended"
+    ],
+    "settings": {
+        "react": {
+            "version": "detect"
+        },
+        "import/resolver": {
+            "babel-module": {},
+			"node": {
+                "extensions": [".js", ".jsx", ".ts", ".tsx"],
+                "moduleDirectory": ["node_modules", "."]
+            }
+        }
+    },
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 2018,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react", "jest-dom", "@typescript-eslint"
+    ],
+    "rules": {
+        "no-console": ["error", { "allow": ["warn", "error"] }],
+        "import/extensions": [
+                "error",
+                "ignorePackages",
+                {
+                "js": "never",
+                "jsx": "never",
+                "ts": "never",
+                "tsx": "never"
+                }
+            ],
+        "linebreak-style": 0,
+        "template-curly-spacing" : "off",
+        // Indent with 4 spaces
+        "indent": ["error", 4, {
+            "ignoredNodes": ["TemplateLiteral"]
+          }],
+        // Indent JSX with 4 spaces
+        "react/jsx-indent": ["error", 4],
+        // Indent props with 4 spaces
+        "react/jsx-indent-props": ["error", 4],
+        "react/react-in-jsx-scope": "off",
+        "jest-dom/prefer-checked": "error",
+        "jest-dom/prefer-enabled-disabled": "error",
+        "jest-dom/prefer-required": "error",
+        "jest-dom/prefer-to-have-attribute": "error",
+		"react/jsx-filename-extension": [2, { "extensions": [".jsx", ".tsx"] }]
+    }
+}
