@@ -7,8 +7,9 @@ module.exports = {
     rootDir: path.join(__dirname, '..'),
     verbose: true,
     moduleNameMapper: {
-        '^utilities/(.*)': '<rootDir>/utilities/$1',
+        '^hooks/(.*)': '<rootDir>/hooks/$1',
         '^components/(.*)': '<rootDir>/components/$1',
+        '^.+\\.(css|less)$': '<rootDir>/test/styleMock.js',
     },
     coveragePathIgnorePatterns: [
         '/node_modules/',

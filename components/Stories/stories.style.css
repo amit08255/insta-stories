@@ -1,0 +1,86 @@
+.storiesWrapper {
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: 95%;
+    white-space: nowrap;
+    padding-left: 11px;
+    padding-right: 5px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e6e6e6;
+
+    .story {
+        display: inline-block;
+        max-width: 90px;
+        margin: 0 6px;
+        margin-left: 6px;
+        vertical-align: top;
+        padding: 0;
+        background: none;
+        border: none;
+
+        .item-link {
+            text-align: center;
+            display: block;
+            color: #333;
+            cursor: pointer;
+
+            .item-preview {
+                display: block;
+                box-sizing: border-box;
+                font-size: 0;
+                max-height: 90px;
+                height: 18vw;
+                width: 18vw;
+                overflow: hidden;
+                transition: transform .2s;
+                border-radius: 50%;
+                padding: 2px;
+                background: radial-gradient(ellipse at 70% 70%, #ee583f 8%, #d92d77 42%, #bd3381 58%);
+
+                img {
+                    display: block;
+                    box-sizing: border-box;
+                    height: 100%;
+                    width: 100%;
+                    background-size: cover;
+                    background-position: center;
+                    object-fit: cover;
+                    border-radius: 50%;
+                    border: 3px solid #fff;
+                }
+            }
+
+            .info {
+                display: inline-block;
+                margin-top: .5em;
+                line-height: 1.2em;
+                width: 100%;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                font-weight: 500;
+            }
+        }
+    }
+
+    .story:first-child {
+        margin-left:  0px;
+    }
+
+    .seen {
+        opacity: 0.75;
+
+        .item-link {
+            color: #999 !important;
+
+            .item-preview {
+                background: #999;
+            }
+
+            .info {
+                color: #999 !important;
+            }
+        }
+    }
+}
